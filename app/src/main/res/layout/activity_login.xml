@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bk_color"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!--       HEADING & PICTURE      -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/gemunulibre_bold"
+                android:text="@string/already_nhave_an_naccount"
+                android:textSize="28sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_register_hero" />
+
+        </RelativeLayout>
+
+
+
+        <!--       NAME EDIT TEXT      -->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEmail"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+
+            <EditText
+                android:id="@+id/editTextEmail_login"
+                style="@style/modifiedEditText"
+                android:hint="@string/login_email_hint"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:fontFamily="@font/gemunulibre_gegular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!--       PASSWORD EDIT TEXT      -->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+
+            <EditText
+                android:id="@+id/editTextPassword_login"
+                style="@style/modifiedEditText"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:fontFamily="@font/gemunulibre_gegular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!--       FORGOT PASSWORD & LOGIN BUTTON       -->
+
+
+        <TextView
+            style="@style/viewParent"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/newsMoreTextSize"
+            android:fontFamily="@font/gemunulibre_gegular"/>
+
+        <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+            android:id="@+id/cirLoginButton"
+            style="@style/loginButton"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/gemunulibre_gegular"
+            android:layout_marginTop="48dp"
+            android:text="@string/login"
+
+            app:initialCornerAngle="27dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"
+            app:spinning_bar_width="4dp" />
+
+        <TextView
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:onClick="onLoginClick"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/themeColor"
+            android:text="@string/new_user_register_now"
+            android:fontFamily="@font/gemunulibre_gegular"/>
+
+
+
+        <!--       USE OTHER METHODS       -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:weightSum="12">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimaryDark" />
+
+            <TextView
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="12sp"
+                android:layout_weight="6"
+                android:textAlignment="center"
+                android:text="@string/use_other_methods"
+                android:fontFamily="@font/gemunulibre_gegular"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+        <!--       FACEBOOK & GOOGLE       -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_google_plus" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+             <!--       PLUS BUTTON & VIEW      -->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="11dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_side_view_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="onLoginClick"
+        android:src="@drawable/ic_add_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

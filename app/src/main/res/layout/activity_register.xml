@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/register_bk_color"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <!--       HEADING & PICTURE      -->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/gemunulibre_gegular"
+                android:text="@string/here_s_nyour_first_nstep_with_nus"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="28sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_login_hero" />
+        </RelativeLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@color/primaryTextColor">
+
+
+
+                <!--       NAME EDITTEXT      -->
+
+
+                    <EditText
+                        android:id="@+id/editTextName"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+
+                        android:maxLines="1"
+                        android:textSize="14sp"
+                        android:hint="@string/name"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="0dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/custom_edittext"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/primaryTextColor"
+                        android:textColorHint="@color/primaryTextColor"
+
+                        android:fontFamily="@font/gemunulibre_gegular"/>
+
+
+
+
+                <!--       EMAIL EDIT TEXT      -->
+
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:hint="@string/login_email_hint"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="0dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/custom_edittext"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"
+                    android:inputType="textEmailAddress"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/gemunulibre_gegular"/>
+
+
+
+
+                <!--       PHONE EDIT TEXT      -->
+
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:hint="@string/hint_phone_number"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="0dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/custom_edittext"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"
+                    android:inputType="phone"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/gemunulibre_gegular"/>
+
+
+
+
+                <!--       PASSWORD EDIT TEXT      -->
+
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:hint="@string/login_password_hint"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="0dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/custom_edittext"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"
+                    android:inputType="textPassword"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/gemunulibre_gegular"/>
+
+
+
+
+                <!--       REGISTER BUTTON     -->
+
+
+                <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                    android:id="@+id/RegisterButton"
+                    style="@style/loginButton"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/register"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/gemunulibre_gegular"
+
+                    app:initialCornerAngle="27dp"
+                    app:spinning_bar_color="#FFF"
+                    app:spinning_bar_padding="6dp"
+                    app:spinning_bar_width="4dp"
+                    />
+
+
+
+
+                <!--       ALREADY HAVE AN ACCOUNT       -->
+
+
+                <TextView
+                    style="@style/parent"
+                    android:layout_marginTop="12dp"
+                    android:onClick="onLoginClick"
+                    android:text="@string/already_have_an_account"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gemunulibre_gegular"/>
+
+            </LinearLayout>
+
+
+
+
+        <!--       USE OTHER METHODS       -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:weightSum="12"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"
+                android:background="@color/whiteTextColor" />
+
+            <TextView
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_weight="4"
+                android:textAlignment="center"
+                android:text="@string/use_other_methods"
+                android:textColor="@color/whiteTextColor"
+                android:fontFamily="@font/gemunulibre_gegular"
+                 />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"
+                android:background="@color/whiteTextColor" />
+
+        </LinearLayout>
+
+
+
+        <!--       FACEBOOK & GOOGLE       -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_google_plus" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+          <!--       BACK BUTTON & VIEW      -->
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_side_view_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="false"
+        android:onClick="onLoginClick"
+
+        android:src="@drawable/ic_back_img"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
