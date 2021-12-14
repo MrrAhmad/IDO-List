@@ -1,13 +1,11 @@
 package com.example.ido_list
 
-import android.content.ContentValues.TAG
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.view.Window
 import android.content.Intent
-import android.util.Log
-import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -47,18 +45,18 @@ class RegisterActivity : AppCompatActivity() {
         // NAME VALIDATION
         if (dataName.isNotEmpty())
         {
-            if (dataName.length <= 9)
+            if (dataName.length <= 15)
             {
 
             }
             else {
-                editTextName.error = "Name length must be less than or equal 9"
+                editTextName.error = "Name length must be less than or equal 15"
                 return
             }
 
         }
         else {
-            editTextName.error = "First Name can't be empty"
+            editTextName.error = "Name can't be empty"
             return }
 
 
@@ -121,7 +119,7 @@ class RegisterActivity : AppCompatActivity() {
 
                     val i = Intent(this,LoginActivity::class.java)
                     // To Remove very previous Activity
-               //     i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                    i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(i)
 
                 } else {
@@ -131,9 +129,6 @@ class RegisterActivity : AppCompatActivity() {
 
                 }
             }
-
-
-
 
     }
 
