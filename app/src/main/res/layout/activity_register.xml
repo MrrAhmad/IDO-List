@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/register_bk_color"
@@ -59,7 +60,8 @@
                 android:orientation="vertical"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:background="@color/primaryTextColor">
+                android:background="@color/myAppCol"
+                tools:ignore="MissingClass">
 
 
 
@@ -80,8 +82,8 @@
                         android:background="@drawable/custom_edittext"
                         android:inputType="textPersonName"
                         android:backgroundTint="@color/white"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
+                        android:textColor="@color/myAppCol"
+                        android:textColorHint="@color/myAppCol"
 
                         android:fontFamily="@font/gemunulibre_gegular"/>
 
@@ -103,12 +105,25 @@
                     android:paddingEnd="12dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/custom_edittext"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/primaryTextColor"
+                    android:textColor="@color/myAppCol"
+                    android:textColorHint="@color/myAppCol"
                     android:inputType="textEmailAddress"
                     android:backgroundTint="@color/white"
                     android:fontFamily="@font/gemunulibre_gegular"/>
 
+
+
+
+                <com.hbb20.CountryCodePicker
+                    app:ccp_hintExampleNumber="true"
+                    android:id="@+id/country_code_picker"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/custom_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </com.hbb20.CountryCodePicker>
 
 
 
@@ -127,8 +142,8 @@
                     android:paddingEnd="12dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/custom_edittext"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/primaryTextColor"
+                    android:textColor="@color/myAppCol"
+                    android:textColorHint="@color/myAppCol"
                     android:inputType="phone"
                     android:backgroundTint="@color/white"
                     android:fontFamily="@font/gemunulibre_gegular"/>
@@ -151,8 +166,8 @@
                     android:paddingEnd="12dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/custom_edittext"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/primaryTextColor"
+                    android:textColor="@color/myAppCol"
+                    android:textColorHint="@color/myAppCol"
                     android:inputType="textPassword"
                     android:backgroundTint="@color/white"
                     android:fontFamily="@font/gemunulibre_gegular"/>

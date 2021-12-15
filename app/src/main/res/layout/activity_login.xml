@@ -58,9 +58,11 @@
                 android:id="@+id/editTextEmail_login"
                 style="@style/modifiedEditText"
                 android:hint="@string/login_email_hint"
-                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:paddingEnd="12dp"
                 android:maxLines="1"
                 android:textSize="14sp"
+                android:inputType="textEmailAddress"
                 android:fontFamily="@font/gemunulibre_gegular"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,15 +74,18 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputPassword"
             style="@style/parent"
+            app:passwordToggleEnabled="true"
             android:layout_marginTop="@dimen/loginViewsMargin">
 
             <EditText
                 android:id="@+id/editTextPassword_login"
                 style="@style/modifiedEditText"
                 android:hint="@string/login_password_hint"
-                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:paddingEnd="12dp"
                 android:maxLines="1"
                 android:textSize="14sp"
+                android:inputType="textPassword"
                 android:fontFamily="@font/gemunulibre_gegular"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,12 +100,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="12dp"
             android:text="@string/forgot_password"
-            android:textColor="@color/primaryTextColor"
+            android:textColor="@color/myAppCol"
             android:textSize="@dimen/newsMoreTextSize"
             android:fontFamily="@font/gemunulibre_gegular"/>
 
         <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
-            android:id="@+id/cirLoginButton"
+            android:id="@+id/LoginButton"
             style="@style/loginButton"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/gemunulibre_gegular"

@@ -57,11 +57,18 @@ dependencies {
         // Import the BoM for the Firebase platform
         implementation platform('com.google.firebase:firebase-bom:29.0.2')
 
+
         // Declare the dependency for the Firebase Authentication library
         // When using the BoM, you don't specify versions in Firebase library dependencies
         implementation 'com.google.firebase:firebase-auth-ktx'
 
 
+        // LOTTIE ANIMATION
+        implementation "com.airbnb.android:lottie:4.2.2"
+
+
+        // Country Code Picker Dependency
+        implementation 'com.hbb20:ccp:2.2.2'
+
+
 }
-
-

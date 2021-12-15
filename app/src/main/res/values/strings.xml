@@ -15,6 +15,8 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="name">Name</string>
     <string name="hint_phone_number">Phone Number</string>
+    <string name="verify_your_email">VERIFY YOUR EMAIL</string>
+    <string name="sub_heading">Go and check your gmail and verify your mail by clicking the following link there</string>
 
 
 </resources>
